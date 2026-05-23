@@ -70,14 +70,23 @@
       font-size: 22px;
     }
     .logo-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
       background: linear-gradient(135deg, var(--hot), #ff9bd5);
       display: grid;
       place-items: center;
       color: #fff;
       box-shadow: 0 12px 30px rgba(255, 31, 143, .25);
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,.85);
+    }
+    .logo-img img { width: 100%; height: 100%; object-fit: cover; }
+    .wordmark {
+      background: linear-gradient(135deg, #211922 20%, #ff1f8f 80%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
     .nav-links {
       display: flex;
@@ -229,6 +238,23 @@
     .product:hover { transform: translateY(-5px); box-shadow: 0 24px 60px rgba(33,25,34,.11); }
     .photo-wrap { position: relative; aspect-ratio: 3 / 4.45; overflow: hidden; background: var(--soft); }
     .photo-wrap img { height: 100%; object-fit: cover; }
+    .angle-stack { position: absolute; inset: 0; }
+    .angle-stack img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .28s ease, transform .28s ease; }
+    .angle-stack .rear { opacity: 0; transform: scale(1.025); }
+    .product:hover .angle-stack .rear { opacity: 1; transform: scale(1); }
+    .product:hover .angle-stack .front { opacity: 0; transform: scale(1.025); }
+    .angle-note {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      background: rgba(33, 25, 34, .82);
+      color: #fff;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 11px;
+      font-weight: 900;
+      backdrop-filter: blur(12px);
+    }
     .tag {
       position: absolute;
       top: 12px;
@@ -330,8 +356,8 @@
   <nav class="nav">
     <div class="nav-inner">
       <a class="logo" href="#top" aria-label="Petite Pink Swim home">
-        <span class="logo-mark">♡</span>
-        <span>Petite Pink Swim</span>
+        <span class="logo-mark logo-img"><img src="assets/logo-petite-pink-swim.jpeg" alt="Petite Pink Swim logo mark" /></span>
+        <span class="wordmark">Petite Pink Swim</span>
       </a>
       <div class="nav-links">
         <a href="#shop">Shop</a>
@@ -347,15 +373,15 @@
       <div>
         <span class="eyebrow">New test drop: 10 pink bikini styles</span>
         <h1>Petite cuts. Pink heat. Zero boring beach energy.</h1>
-        <p>A playful test bikini shop built around petite proportions, warm undertones, and cute-but-bold swimwear for adult Black women who want pink to do the absolute most.</p>
+        <p>A playful test bikini shop built around petite proportions, warm undertones, cute-but-bold swimwear, rear-view product angles, and pink accessories doing entirely too much — correctly.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#shop">Shop the 10 styles →</a>
           <a class="btn btn-secondary" href="#fit">See fit notes</a>
         </div>
         <div class="benefits" id="fit">
           <div class="benefit"><b>Petite-first</b><span>Shorter torso reads, adjustable ties, scaled straps.</span></div>
-          <div class="benefit"><b>Pink spectrum</b><span>Blush, bubblegum, fuchsia, hot pink, magenta.</span></div>
-          <div class="benefit"><b>Revealing + cute</b><span>Minimal silhouettes without killing the playful vibe.</span></div>
+          <div class="benefit"><b>Pink spectrum</b><span>Blush, bubblegum, fuchsia, hot pink, magenta — plus pink accessories.</span></div>
+          <div class="benefit"><b>All angles</b><span>Hover product photos to see rear catalog views.</span></div>
           <div class="benefit"><b>Test store</b><span>Static concept page. No checkout. No sneaky little payment trap.</span></div>
         </div>
       </div>
@@ -376,43 +402,43 @@
 
       <div class="grid">
         <article class="product">
-          <div class="photo-wrap"><img src="assets/style-01-triangle.jpeg" alt="Hot Pink Tiny Triangle bikini" /><span class="tag">Best seller</span></div>
+          <div class="photo-wrap"><div class="angle-stack"><img class="front" src="assets/style-01-triangle.jpeg" alt="Front view of Hot Pink Tiny Triangle bikini" /><img class="rear" src="assets/style-01-rear.jpeg" alt="Rear view of Hot Pink Tiny Triangle bikini with pink styling accessories" /></div><span class="tag">Best seller</span><span class="angle-note">hover: rear view</span></div>
           <div class="product-body"><div class="product-title"><span>Hot Pink Tiny Triangle</span><span>$78</span></div><div class="desc">Minimal triangle top, tie-side bottom, maximum pink trouble.</div><div class="sizes"><span>XXS</span><span>XS</span><span>PS</span><span>PM</span></div></div>
         </article>
         <article class="product">
-          <div class="photo-wrap"><img src="assets/style-02-bandeau.jpeg" alt="Blush Bandeau bikini" /><span class="tag">Soft</span></div>
+          <div class="photo-wrap"><div class="angle-stack"><img class="front" src="assets/style-02-bandeau.jpeg" alt="Front view of Blush Bandeau bikini" /><img class="rear" src="assets/style-02-rear.jpeg" alt="Rear view of Blush Bandeau bikini with pink styling accessories" /></div><span class="tag">Soft</span><span class="angle-note">hover: rear view</span></div>
           <div class="product-body"><div class="product-title"><span>Blush Bandeau</span><span>$82</span></div><div class="desc">Clean strapless shape with high-cut petite bottoms.</div><div class="sizes"><span>XXS</span><span>XS</span><span>PS</span><span>PM</span></div></div>
         </article>
         <article class="product">
-          <div class="photo-wrap"><img src="assets/style-03-halter.jpeg" alt="Bubblegum Halter bikini" /><span class="tag">Cute</span></div>
+          <div class="photo-wrap"><div class="angle-stack"><img class="front" src="assets/style-03-halter.jpeg" alt="Front view of Bubblegum Halter bikini" /><img class="rear" src="assets/style-03-rear.jpeg" alt="Rear view of Bubblegum Halter bikini with pink styling accessories" /></div><span class="tag">Cute</span><span class="angle-note">hover: rear view</span></div>
           <div class="product-body"><div class="product-title"><span>Bubblegum Halter</span><span>$84</span></div><div class="desc">Sweet halter lift, tiny side ties, beach-crush energy.</div><div class="sizes"><span>XXS</span><span>XS</span><span>PS</span><span>PM</span></div></div>
         </article>
         <article class="product">
-          <div class="photo-wrap"><img src="assets/style-04-cutout.jpeg" alt="Rose Cutout bikini" /><span class="tag">Bold</span></div>
+          <div class="photo-wrap"><div class="angle-stack"><img class="front" src="assets/style-04-cutout.jpeg" alt="Front view of Rose Cutout bikini" /><img class="rear" src="assets/style-04-rear.jpeg" alt="Rear view of Rose Cutout bikini with pink styling accessories" /></div><span class="tag">Bold</span><span class="angle-note">hover: rear view</span></div>
           <div class="product-body"><div class="product-title"><span>Rose Cutout</span><span>$88</span></div><div class="desc">A sharper silhouette with a luxe cabana attitude.</div><div class="sizes"><span>XXS</span><span>XS</span><span>PS</span><span>PM</span></div></div>
         </article>
         <article class="product">
-          <div class="photo-wrap"><img src="assets/style-05-string.jpeg" alt="Neon String bikini" /><span class="tag">Tiny</span></div>
+          <div class="photo-wrap"><div class="angle-stack"><img class="front" src="assets/style-05-string.jpeg" alt="Front view of Neon String bikini" /><img class="rear" src="assets/style-05-rear.jpeg" alt="Rear view of Neon String bikini with pink styling accessories" /></div><span class="tag">Tiny</span><span class="angle-note">hover: rear view</span></div>
           <div class="product-body"><div class="product-title"><span>Neon String</span><span>$76</span></div><div class="desc">Ruched details, tie-everything fit, loud as hell.</div><div class="sizes"><span>XXS</span><span>XS</span><span>PS</span><span>PM</span></div></div>
         </article>
         <article class="product">
-          <div class="photo-wrap"><img src="assets/style-06-balconette.jpeg" alt="Bow Balconette bikini" /><span class="tag">Sweet</span></div>
+          <div class="photo-wrap"><div class="angle-stack"><img class="front" src="assets/style-06-balconette.jpeg" alt="Front view of Bow Balconette bikini" /><img class="rear" src="assets/style-06-rear.jpeg" alt="Rear view of Bow Balconette bikini with pink styling accessories" /></div><span class="tag">Sweet</span><span class="angle-note">hover: rear view</span></div>
           <div class="product-body"><div class="product-title"><span>Bow Balconette</span><span>$90</span></div><div class="desc">Soft cup shape with tiny bow details and pastel polish.</div><div class="sizes"><span>XXS</span><span>XS</span><span>PS</span><span>PM</span></div></div>
         </article>
         <article class="product">
-          <div class="photo-wrap"><img src="assets/style-07-wrap.jpeg" alt="Magenta Wrap bikini" /><span class="tag">Chic</span></div>
+          <div class="photo-wrap"><div class="angle-stack"><img class="front" src="assets/style-07-wrap.jpeg" alt="Front view of Magenta Wrap bikini" /><img class="rear" src="assets/style-07-rear.jpeg" alt="Rear view of Magenta Wrap bikini with pink styling accessories" /></div><span class="tag">Chic</span><span class="angle-note">hover: rear view</span></div>
           <div class="product-body"><div class="product-title"><span>Magenta Wrap</span><span>$86</span></div><div class="desc">Wrap-top lines, rooftop-pool attitude, petite scale.</div><div class="sizes"><span>XXS</span><span>XS</span><span>PS</span><span>PM</span></div></div>
         </article>
         <article class="product">
-          <div class="photo-wrap"><img src="assets/style-08-one-shoulder.jpeg" alt="Pale Pink One Shoulder bikini" /><span class="tag">Clean</span></div>
+          <div class="photo-wrap"><div class="angle-stack"><img class="front" src="assets/style-08-one-shoulder.jpeg" alt="Front view of Pale Pink One Shoulder bikini" /><img class="rear" src="assets/style-08-rear.jpeg" alt="Rear view of Pale Pink One Shoulder bikini with pink styling accessories" /></div><span class="tag">Clean</span><span class="angle-note">hover: rear view</span></div>
           <div class="product-body"><div class="product-title"><span>Pale One-Shoulder</span><span>$80</span></div><div class="desc">Minimal asymmetry with a soft pink studio finish.</div><div class="sizes"><span>XXS</span><span>XS</span><span>PS</span><span>PM</span></div></div>
         </article>
         <article class="product">
-          <div class="photo-wrap"><img src="assets/style-09-pearl.jpeg" alt="Fuchsia Pearl Strap bikini" /><span class="tag">Glam</span></div>
+          <div class="photo-wrap"><div class="angle-stack"><img class="front" src="assets/style-09-pearl.jpeg" alt="Front view of Fuchsia Pearl Strap bikini" /><img class="rear" src="assets/style-09-rear.jpeg" alt="Rear view of Fuchsia Pearl Strap bikini with pink styling accessories" /></div><span class="tag">Glam</span><span class="angle-note">hover: rear view</span></div>
           <div class="product-body"><div class="product-title"><span>Fuchsia Pearl Strap</span><span>$96</span></div><div class="desc">Delicate strap detail, sunset balcony drama.</div><div class="sizes"><span>XXS</span><span>XS</span><span>PS</span><span>PM</span></div></div>
         </article>
         <article class="product">
-          <div class="photo-wrap"><img src="assets/style-10-gloss.jpeg" alt="Gloss Pink Minimal bikini" /><span class="tag">New</span></div>
+          <div class="photo-wrap"><div class="angle-stack"><img class="front" src="assets/style-10-gloss.jpeg" alt="Front view of Gloss Pink Minimal bikini" /><img class="rear" src="assets/style-10-rear.jpeg" alt="Rear view of Gloss Pink Minimal bikini with pink styling accessories" /></div><span class="tag">New</span><span class="angle-note">hover: rear view</span></div>
           <div class="product-body"><div class="product-title"><span>Gloss Pink Minimal</span><span>$92</span></div><div class="desc">Gold hardware, glossy finish, clean resort menace.</div><div class="sizes"><span>XXS</span><span>XS</span><span>PS</span><span>PM</span></div></div>
         </article>
       </div>
@@ -420,7 +446,7 @@
       <div class="editorial" id="drop">
         <div class="panel pink">
           <div class="mini">Drop notes</div>
-          <div><h3>Small-frame proportions, big main-character energy.</h3><p>Every product card is written for petite swimwear fit: shorter torso balance, adjustable straps, high-cut legs, and not a single apologetic beige rectangle in sight.</p></div>
+          <div><h3>Small-frame proportions, big main-character energy.</h3><p>Every product card now has front and rear catalog imagery, pink styling extras, shorter torso balance, adjustable straps, and not a single apologetic beige rectangle in sight.</p></div>
         </div>
         <div class="panel">
           <div class="mini">Concept build</div>
