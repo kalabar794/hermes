@@ -1,0 +1,20 @@
+# Hermes Build Target
+
+This repo is the default build/deploy target for Hermes Agent (kalabar794's
+Railway deployment).
+
+When Jonathon asks Hermes "build me a website" / "build a quick X" / similar
+one-off code projects without naming a different repo, the output lands here.
+
+- Wired: 2026-05-23
+- Token env on hermes-agent: $HERMES_BUILD_TOKEN
+- Repo env on hermes-agent: $HERMES_BUILD_REPO (= kalabar794/hermes)
+- Token scope: this repo only (fine-grained PAT, admin/push/pull)
+- Auto-deploy: none yet — repo is storage. Enable Pages/Vercel/Cloudflare
+  separately to get a live URL on push.
+
+Default workflow:
+  git clone https://x-access-token:$HERMES_BUILD_TOKEN@github.com/kalabar794/hermes.git
+  # generate / replace files in repo root
+  git -c user.name='Hermes' -c user.email='hermes@weomedia.com' commit -am '...'
+  git push origin main
