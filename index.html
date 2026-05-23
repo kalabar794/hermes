@@ -290,6 +290,43 @@
       font-weight: 900;
     }
 
+
+    .grok-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .9fr .9fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+    .grok-card {
+      position: relative;
+      min-height: 440px;
+      overflow: hidden;
+      border-radius: 32px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 70px rgba(33,25,34,.09);
+    }
+    .grok-card.featured { grid-row: span 2; min-height: 896px; }
+    .grok-card img { width: 100%; height: 100%; object-fit: cover; }
+    .grok-label {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      padding: 12px 14px;
+      border-radius: 20px;
+      color: #fff;
+      background: linear-gradient(135deg, rgba(33,25,34,.84), rgba(255,31,143,.72));
+      backdrop-filter: blur(14px);
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+    .grok-label span:last-child { font-size: 12px; opacity: .82; letter-spacing: .02em; }
+
     .editorial {
       display: grid;
       grid-template-columns: 1fr;
@@ -338,12 +375,16 @@
       .grid { grid-template-columns: repeat(2, 1fr); }
       .benefits { grid-template-columns: repeat(2, 1fr); }
       .editorial { grid-template-columns: 1fr; }
+      .grok-grid { grid-template-columns: repeat(2, 1fr); }
+      .grok-card.featured { grid-row: auto; min-height: 560px; }
       .section-head { display: block; }
       .section-head p { margin-top: 12px; }
     }
     @media (max-width: 620px) {
       .nav-links a:not(.bag) { display: none; }
       .grid { grid-template-columns: 1fr; }
+      .grok-grid { grid-template-columns: 1fr; }
+      .grok-card, .grok-card.featured { min-height: 520px; }
       .benefits { grid-template-columns: 1fr; }
       .footer-inner { display: block; }
       .hero p { font-size: 16px; }
@@ -360,6 +401,7 @@
       <div class="nav-links">
         <a href="#shop">Shop</a>
         <a href="#fit">Petite Fit</a>
+        <a href="#grok-drop">Grok Drop</a>
         <a href="#drop">The Drop</a>
         <a class="bag" href="#shop">Bag 0</a>
       </div>
@@ -389,6 +431,22 @@
           <div><strong>Hot Pink Micro Thong</strong><span>Adjustable micro triangle set</span></div>
           <div class="price-pill">$78</div>
         </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="grok-drop">
+      <div class="section-head">
+        <h2>Grok pink drop.</h2>
+        <p>Fresh pink lifestyle shots added from your Grok batch — stronger visual variety before shoppers hit the full product grid.</p>
+      </div>
+      <div class="grok-grid">
+        <article class="grok-card featured"><img src="assets/grok-upload-01.jpg" alt="Pink micro bikini studio campaign image" /><div class="grok-label"><span>Studio Micro Pink</span><span>Campaign</span></div></article>
+        <article class="grok-card"><img src="assets/grok-upload-02.jpg" alt="Poolside hot pink bikini lifestyle image" /><div class="grok-label"><span>Poolside Pink</span><span>Lifestyle</span></div></article>
+        <article class="grok-card"><img src="assets/grok-upload-03.jpg" alt="Pink bikini campaign image from Grok batch" /><div class="grok-label"><span>Pink Heat</span><span>Grok</span></div></article>
+        <article class="grok-card"><img src="assets/grok-upload-04.jpg" alt="Pink swimwear lifestyle campaign image" /><div class="grok-label"><span>Tiny Cut</span><span>Editorial</span></div></article>
+        <article class="grok-card"><img src="assets/grok-upload-05.jpg" alt="Pink bikini fashion campaign image" /><div class="grok-label"><span>Bubblegum Bodyline</span><span>Feature</span></div></article>
+        <article class="grok-card"><img src="assets/grok-upload-06.jpg" alt="Pink swimwear campaign image" /><div class="grok-label"><span>Hot Pink Closer</span><span>Drop</span></div></article>
       </div>
     </section>
 
