@@ -291,6 +291,43 @@
     }
 
 
+
+    .tiny-drop-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .tiny-drop-card {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 58px rgba(33,25,34,.10);
+    }
+    .tiny-drop-card img { width: 100%; height: 100%; object-fit: cover; }
+    .tiny-drop-card.featured { grid-column: span 2; grid-row: span 2; }
+    .tiny-drop-label {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(33,25,34,.84), rgba(255,31,143,.76));
+      color: #fff;
+      backdrop-filter: blur(14px);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      font-size: 13px;
+    }
+    .tiny-drop-label span:last-child { font-size: 11px; opacity: .82; letter-spacing: .02em; }
+
     .grok-grid {
       display: grid;
       grid-template-columns: 1.25fr .9fr .9fr;
@@ -375,7 +412,44 @@
       .grid { grid-template-columns: repeat(2, 1fr); }
       .benefits { grid-template-columns: repeat(2, 1fr); }
       .editorial { grid-template-columns: 1fr; }
-      .grok-grid { grid-template-columns: repeat(2, 1fr); }
+  
+    .tiny-drop-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .tiny-drop-card {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 58px rgba(33,25,34,.10);
+    }
+    .tiny-drop-card img { width: 100%; height: 100%; object-fit: cover; }
+    .tiny-drop-card.featured { grid-column: span 2; grid-row: span 2; }
+    .tiny-drop-label {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(33,25,34,.84), rgba(255,31,143,.76));
+      color: #fff;
+      backdrop-filter: blur(14px);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      font-size: 13px;
+    }
+    .tiny-drop-label span:last-child { font-size: 11px; opacity: .82; letter-spacing: .02em; }
+
+    .grok-grid { grid-template-columns: repeat(2, 1fr); }
       .grok-card.featured { grid-row: auto; min-height: 560px; }
       .section-head { display: block; }
       .section-head p { margin-top: 12px; }
@@ -383,7 +457,44 @@
     @media (max-width: 620px) {
       .nav-links a:not(.bag) { display: none; }
       .grid { grid-template-columns: 1fr; }
-      .grok-grid { grid-template-columns: 1fr; }
+  
+    .tiny-drop-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .tiny-drop-card {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 20px 58px rgba(33,25,34,.10);
+    }
+    .tiny-drop-card img { width: 100%; height: 100%; object-fit: cover; }
+    .tiny-drop-card.featured { grid-column: span 2; grid-row: span 2; }
+    .tiny-drop-label {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(33,25,34,.84), rgba(255,31,143,.76));
+      color: #fff;
+      backdrop-filter: blur(14px);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      font-size: 13px;
+    }
+    .tiny-drop-label span:last-child { font-size: 11px; opacity: .82; letter-spacing: .02em; }
+
+    .grok-grid { grid-template-columns: 1fr; }
       .grok-card, .grok-card.featured { min-height: 520px; }
       .benefits { grid-template-columns: 1fr; }
       .footer-inner { display: block; }
@@ -401,6 +512,7 @@
       <div class="nav-links">
         <a href="#shop">Shop</a>
         <a href="#fit">Petite Fit</a>
+        <a href="#user-drop">Tiny Drop</a>
         <a href="#grok-drop">Grok Drop</a>
         <a href="#drop">The Drop</a>
         <a class="bag" href="#shop">Bag 0</a>
@@ -434,6 +546,28 @@
       </div>
     </section>
 
+
+
+    <section class="section" id="user-drop">
+      <div class="section-head">
+        <h2>Tiny pink drop.</h2>
+        <p>Your latest Grok batch, added as a high-impact campaign gallery before the product grid.</p>
+      </div>
+      <div class="tiny-drop-grid">
+        <article class="tiny-drop-card featured"><img src="assets/user-upload-01.jpg" alt="Pink Micro Studio pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Pink Micro Studio</span><span>Hero</span></div></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-02.jpg" alt="Tiny Triangle pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Tiny Triangle</span><span>Front</span></div></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-03.jpg" alt="Barely-There Pink pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Barely-There Pink</span><span>Campaign</span></div></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-04.jpg" alt="String Fit pink micro bikini campaign image" /><div class="tiny-drop-label"><span>String Fit</span><span>Drop</span></div></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-05.jpg" alt="Minimal Pink pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Minimal Pink</span><span>Feature</span></div></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-06.jpg" alt="Ultra Tiny pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Ultra Tiny</span><span>Grok</span></div></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-07.jpg" alt="Pink String Set pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Pink String Set</span><span>Look</span></div></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-08.jpg" alt="Slender Cut pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Slender Cut</span><span>Style</span></div></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-09.jpg" alt="Hot Pink Fit pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Hot Pink Fit</span><span>Edit</span></div></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-10.jpg" alt="Micro Catalog pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Micro Catalog</span><span>New</span></div></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-11.jpg" alt="Studio Tease pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Studio Tease</span><span>Front</span></div></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-12.jpg" alt="Tiny Pink Closer pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Tiny Pink Closer</span><span>Closer</span></div></article>
+      </div>
+    </section>
 
     <section class="section" id="grok-drop">
       <div class="section-head">
