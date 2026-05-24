@@ -140,6 +140,22 @@
       color: var(--muted);
     }
     .hero-actions { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+    .gift-note {
+      margin-top: 16px;
+      max-width: 560px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      padding: 14px 16px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.74);
+      border: 1px solid rgba(255,31,143,.18);
+      box-shadow: 0 18px 42px rgba(255,31,143,.10);
+      color: var(--muted);
+      line-height: 1.35;
+    }
+    .gift-note strong { color: var(--hot); white-space: nowrap; }
+
     .btn {
       border: 0;
       border-radius: 18px;
@@ -222,6 +238,22 @@
     }
     .benefit b { display: block; margin-bottom: 5px; }
     .benefit span { color: var(--muted); font-size: 14px; line-height: 1.4; }
+
+
+    .boyfriend-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px;
+      margin: 0 0 18px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #211922, #7e123f 55%, #ff1f8f);
+      color: #fff;
+      box-shadow: 0 24px 70px rgba(255,31,143,.18);
+    }
+    .boyfriend-strip b { display: block; font-size: 20px; letter-spacing: -.04em; }
+    .boyfriend-strip span { display: block; margin-top: 4px; color: rgba(255,255,255,.76); line-height: 1.4; }
 
     .grid {
       display: grid;
@@ -498,6 +530,10 @@
       .grok-card, .grok-card.featured { min-height: 520px; }
       .benefits { grid-template-columns: 1fr; }
       .footer-inner { display: block; }
+      .boyfriend-strip { display: block; }
+      .boyfriend-strip .btn { margin-top: 14px; }
+      .gift-note { display: block; }
+      .gift-note span { display: block; margin-top: 4px; }
       .hero p { font-size: 16px; }
     }
   </style>
@@ -524,17 +560,18 @@
     <section class="hero">
       <div>
         <span class="eyebrow">New test drop: 10 pink bikini styles</span>
-        <h1>Micro cuts. Pink heat. Zero boring beach energy.</h1>
-        <p>A pink swimwear shop built around petite proportions, ultra-minimal high-cut thong silhouettes, rear-view product angles, sheer/lace/sequin details, and pink accessories doing entirely too much — correctly.</p>
+        <h1>Tiny gifts. Pink trouble. Zero innocent intentions.</h1>
+        <p>A pink swimwear boutique for boyfriends buying the kind of gift she unwraps, tries on, and makes you forget how words work. Petite cuts, tiny thong fits, rear-view angles, sheer lace, sequins, and absolutely no boring beach behavior.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#shop">Shop the 20 styles →</a>
-          <a class="btn btn-secondary" href="#fit">See fit notes</a>
+          <a class="btn btn-primary" href="#shop">Shop gifts that start trouble →</a>
+          <a class="btn btn-secondary" href="#fit">Boyfriend gift guide</a>
         </div>
+        <div class="gift-note"><strong>Shopping for her?</strong><span>Pick pink, go tiny, check the rear view, and let the gift do the dirty talking.</span></div>
         <div class="benefits" id="fit">
-          <div class="benefit"><b>Petite-first</b><span>Shorter torso reads, adjustable ties, scaled straps.</span></div>
-          <div class="benefit"><b>Pink spectrum</b><span>Blush, bubblegum, fuchsia, hot pink, magenta — plus pink accessories.</span></div>
-          <div class="benefit"><b>All angles</b><span>Hover product photos to see rear micro-thong views.</span></div>
-          <div class="benefit"><b>Test store</b><span>Static concept page. No checkout. No sneaky little payment trap.</span></div>
+          <div class="benefit"><b>Boyfriend-proof picks</b><span>If you know her size, you can survive this mission.</span></div>
+          <div class="benefit"><b>Pink gets reactions</b><span>Blush, bubblegum, fuchsia, hot pink, magenta — all engineered for jaw-drop.</span></div>
+          <div class="benefit"><b>Rear-view shopping</b><span>Hover to check the angle he is definitely pretending not to care about.</span></div>
+          <div class="benefit"><b>Tiny on purpose</b><span>High-cut micro thong silhouettes for maximum “damn” per square inch.</span></div>
         </div>
       </div>
       <div class="hero-card">
@@ -551,7 +588,7 @@
     <section class="section" id="user-drop">
       <div class="section-head">
         <h2>Tiny pink drop.</h2>
-        <p>Your latest Grok batch, added as a high-impact campaign gallery before the product grid.</p>
+        <p>Gift-bait campaign shots for the boyfriend who wants credit, chaos, and a very enthusiastic thank-you later.</p>
       </div>
       <div class="tiny-drop-grid">
         <article class="tiny-drop-card featured"><img src="assets/user-upload-01.jpg" alt="Pink Micro Studio pink micro bikini campaign image" /><div class="tiny-drop-label"><span>Pink Micro Studio</span><span>Hero</span></div></article>
@@ -572,7 +609,7 @@
     <section class="section" id="grok-drop">
       <div class="section-head">
         <h2>Grok pink drop.</h2>
-        <p>Fresh pink lifestyle shots added from your Grok batch — stronger visual variety before shoppers hit the full product grid.</p>
+        <p>Fresh pink lifestyle shots for shoppers buying with their heart, their hormones, and questionable impulse control.</p>
       </div>
       <div class="grok-grid">
         <article class="grok-card featured"><img src="assets/grok-upload-01.jpg" alt="Pink micro bikini studio campaign image" /><div class="grok-label"><span>Studio Micro Pink</span><span>Campaign</span></div></article>
@@ -586,8 +623,14 @@
 
     <section class="section" id="shop">
       <div class="section-head">
-        <h2>20 micro pink thong styles.</h2>
-        <p>Built for tiny high-cut fits: 20 bold product cards, front/rear catalog imagery, sheer/lace/sequin details, and petite sizing notes baked into every style.</p>
+        <h2>20 tiny pink gifts with consequences.</h2>
+        <p>Built for gift buyers who want the “you bought this for me?” look. Twenty tiny high-cut fits with front/rear views, sheer lace, sequins, sparkle, and enough pink detail to make checkout feel like flirting.</p>
+      </div>
+
+
+      <div class="boyfriend-strip">
+        <div><b>For boyfriends with taste and terrible self-control.</b><span>Not sure what to buy? Start with Best Seller, Sequin, Lace, or anything with “Micro” in the name. Cowardice is not a size.</span></div>
+        <a class="btn btn-primary" href="#shop">Make her blush →</a>
       </div>
 
       <div class="grid">
@@ -676,7 +719,7 @@
       <div class="editorial" id="drop">
         <div class="panel pink">
           <div class="mini">Drop notes</div>
-          <div><h3>Small-frame proportions, big main-character energy.</h3><p>Every product card now has front and rear micro-thong catalog imagery, pink styling extras, ultra-thin strings, sheer/lace/sequin details, and not a single apologetic beige rectangle in sight.</p></div>
+          <div><h3>Small-frame proportions, big main-character energy.</h3><p>Every product card has front and rear micro-thong imagery, pink styling extras, ultra-thin strings, sheer/lace/sequin details, and gift energy that says: “I pay attention, and I am not remotely sorry.”</p></div>
         </div>
 
       </div>
