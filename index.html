@@ -323,38 +323,36 @@
 
     .tiny-drop-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
     .tiny-drop-card {
       position: relative;
-      aspect-ratio: 9 / 16;
       overflow: hidden;
       border-radius: 28px;
       background: #fff;
       border: 1px solid var(--line);
       box-shadow: 0 20px 58px rgba(33,25,34,.10);
     }
-    .tiny-drop-card img { width: 100%; height: 100%; object-fit: cover; }
-    .tiny-drop-card.featured { grid-column: span 2; grid-row: span 2; }
+    .tiny-drop-card img { width: 100%; height: auto; display: block; }
+    .tiny-drop-card.featured { grid-column: span 2; }
 
     .grok-grid {
       display: grid;
-      grid-template-columns: 1.25fr .9fr .9fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      align-items: stretch;
+      align-items: start;
     }
     .grok-card {
       position: relative;
-      min-height: 440px;
       overflow: hidden;
       border-radius: 32px;
       background: #fff;
       border: 1px solid var(--line);
       box-shadow: 0 24px 70px rgba(33,25,34,.09);
     }
-    .grok-card.featured { grid-row: span 2; min-height: 896px; }
-    .grok-card img { width: 100%; height: 100%; object-fit: cover; }
+    .grok-card.featured { grid-column: span 2; }
+    .grok-card img { width: 100%; height: auto; display: block; }
     
     
 
@@ -409,20 +407,19 @@
   
     .tiny-drop-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
     .tiny-drop-card {
       position: relative;
-      aspect-ratio: 9 / 16;
       overflow: hidden;
       border-radius: 28px;
       background: #fff;
       border: 1px solid var(--line);
       box-shadow: 0 20px 58px rgba(33,25,34,.10);
     }
-    .tiny-drop-card img { width: 100%; height: 100%; object-fit: cover; }
-    .tiny-drop-card.featured { grid-column: span 2; grid-row: span 2; }
+    .tiny-drop-card img { width: 100%; height: auto; display: block; }
+    .tiny-drop-card.featured { grid-column: span 2; }
 
     .grok-grid { grid-template-columns: repeat(2, 1fr); }
       .grok-card.featured { grid-row: auto; min-height: 560px; }
@@ -435,20 +432,19 @@
   
     .tiny-drop-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
     .tiny-drop-card {
       position: relative;
-      aspect-ratio: 9 / 16;
       overflow: hidden;
       border-radius: 28px;
       background: #fff;
       border: 1px solid var(--line);
       box-shadow: 0 20px 58px rgba(33,25,34,.10);
     }
-    .tiny-drop-card img { width: 100%; height: 100%; object-fit: cover; }
-    .tiny-drop-card.featured { grid-column: span 2; grid-row: span 2; }
+    .tiny-drop-card img { width: 100%; height: auto; display: block; }
+    .tiny-drop-card.featured { grid-column: span 2; }
 
     .grok-grid { grid-template-columns: 1fr; }
       .grok-card, .grok-card.featured { min-height: 520px; }
@@ -480,6 +476,27 @@
     </div>
   </nav>
 
+<section class="section" id="user-drop">
+      <div class="section-head">
+        <h2>Tiny pink drop.</h2>
+        <p>Gift-bait campaign shots for the boyfriend who wants credit, chaos, and a very enthusiastic thank-you later.</p>
+      </div>
+      <div class="tiny-drop-grid">
+        <article class="tiny-drop-card featured"><img src="assets/user-upload-01.jpg" alt="Pink Micro Studio pink micro bikini campaign image" /></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-02.jpg" alt="Tiny Triangle pink micro bikini campaign image" /></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-03.jpg" alt="Barely-There Pink pink micro bikini campaign image" /></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-04.jpg" alt="String Fit pink micro bikini campaign image" /></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-05.jpg" alt="Minimal Pink pink micro bikini campaign image" /></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-06.jpg" alt="Ultra Tiny pink micro bikini campaign image" /></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-07.jpg" alt="Pink String Set pink micro bikini campaign image" /></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-08.jpg" alt="Slender Cut pink micro bikini campaign image" /></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-09.jpg" alt="Hot Pink Fit pink micro bikini campaign image" /></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-10.jpg" alt="Micro Catalog pink micro bikini campaign image" /></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-11.jpg" alt="Studio Tease pink micro bikini campaign image" /></article>
+        <article class="tiny-drop-card"><img src="assets/user-upload-12.jpg" alt="Tiny Pink Closer pink micro bikini campaign image" /></article>
+      </div>
+    </section>
+
   <main id="top">
     <section class="hero">
       <div>
@@ -507,26 +524,7 @@
       </div>
     </section>
 
-    <section class="section" id="user-drop">
-      <div class="section-head">
-        <h2>Tiny pink drop.</h2>
-        <p>Gift-bait campaign shots for the boyfriend who wants credit, chaos, and a very enthusiastic thank-you later.</p>
-      </div>
-      <div class="tiny-drop-grid">
-        <article class="tiny-drop-card featured"><img src="assets/user-upload-01.jpg" alt="Pink Micro Studio pink micro bikini campaign image" /></article>
-        <article class="tiny-drop-card"><img src="assets/user-upload-02.jpg" alt="Tiny Triangle pink micro bikini campaign image" /></article>
-        <article class="tiny-drop-card"><img src="assets/user-upload-03.jpg" alt="Barely-There Pink pink micro bikini campaign image" /></article>
-        <article class="tiny-drop-card"><img src="assets/user-upload-04.jpg" alt="String Fit pink micro bikini campaign image" /></article>
-        <article class="tiny-drop-card"><img src="assets/user-upload-05.jpg" alt="Minimal Pink pink micro bikini campaign image" /></article>
-        <article class="tiny-drop-card"><img src="assets/user-upload-06.jpg" alt="Ultra Tiny pink micro bikini campaign image" /></article>
-        <article class="tiny-drop-card"><img src="assets/user-upload-07.jpg" alt="Pink String Set pink micro bikini campaign image" /></article>
-        <article class="tiny-drop-card"><img src="assets/user-upload-08.jpg" alt="Slender Cut pink micro bikini campaign image" /></article>
-        <article class="tiny-drop-card"><img src="assets/user-upload-09.jpg" alt="Hot Pink Fit pink micro bikini campaign image" /></article>
-        <article class="tiny-drop-card"><img src="assets/user-upload-10.jpg" alt="Micro Catalog pink micro bikini campaign image" /></article>
-        <article class="tiny-drop-card"><img src="assets/user-upload-11.jpg" alt="Studio Tease pink micro bikini campaign image" /></article>
-        <article class="tiny-drop-card"><img src="assets/user-upload-12.jpg" alt="Tiny Pink Closer pink micro bikini campaign image" /></article>
-      </div>
-    </section>
+    
 
             <article class="tiny-drop-card"><img src="assets/user-upload-13.jpg" alt="Pink micro bikini studio image" /></article>
 
